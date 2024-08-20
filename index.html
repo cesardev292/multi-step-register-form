@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multi Step Register Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<img class="left-top-img lt-img" src="image/blur-radial.svg">
+<img class="left-top-img rb-img" src="image/blur-radial.svg">
+<form class="container step-all">
+    <div class="card">
+        <div class="content">
+            <div class="step step-1 show">
+                <h5>Register</h5>
+                <div class="group-fields">
+                    <small>Name</small>
+                    <input type="text" name="name" id="name" placeholder="enter your name" autocomplete="off">
+                </div>
+                <div class="group-fields">
+                    <small>Email</small>
+                    <input type="email" name="email" id="email" placeholder="example@gmail.com" autocomplete="off">
+                    <span class="alerta-email">Escribir correctamente el email.</span>
+                </div>
+                <button id="btn1" type="button" class="mx-auto mt-12" disabled>Continue</button>
+            </div>
+            <div class="step step-2">
+                <h5 class="title-step-2">Which topics you are interested in?</h5>
+                <ul id="opcion" class="ul-step-2">
+                    <li>
+                        <a href="#" data-index="1">Software Development</a>
+                    </li>
+                    <li>
+                        <a href="#" data-index="2">User Experience</a>
+                    </li>
+                    <li>
+                        <a href="#" data-index="3">Graphic Design</a>
+                    </li>
+                </ul>
+                <button id="btn2" type="button" class="mx-auto mt-12" disabled>Continue</button>
+            </div>
+            <div class="step step-3">
+                <h5>Summary</h5>
+                <div class="item-1">
+                    <p >Name: <span id="nombre">Cesar</span></p>
+                    <p >Email: <span id="correo">cesar</span></p>
+                </div>
+                <div class="item-2">
+                    <p>Topics:</p>
+                    <ul id="lista"></ul>
+                </div>
+                <button id="btn3" type="button" class="mx-auto mt-12">Confirm</button>
+            </div>
+
+        </div>
+    </div>
+    <div class="group-bullet">
+        <p>Step 1 of 3</p>
+        <div class="circles">
+            <div class="circle c1 active"></div>
+            <div class="circle c2"></div>
+            <div class="circle c3"></div>
+        </div>
+    </div>
+</form>
+
+<script src="app.js"></script>
+</body>
+</html>
